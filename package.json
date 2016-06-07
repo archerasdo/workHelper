@@ -1,0 +1,7 @@
+{
+  "name": "workHelper",
+  "version": "0.0.1",
+  "bin":{
+    "workHelper":"workHelper"
+  }
+}
