@@ -31,13 +31,18 @@ class workHelper {
                 cfg = JSON.parse(cfg[1]);
                 cfg[this.getFeatureName()] = this.getFeaturePath();
                 cfg = JSON.stringify(cfg, null, "\t");
-                console.log(cfg);
             } else {
-                let newCfg = {};
-                newCfg[this.getFeatureName()] = this.getFeatureName();
-                newCfg = JSON.stringify(newCfg, null, "\t");
-                console.log(newCfg)
+                cfg = {};
+                cfg[this.getFeatureName()] = this.getFeatureName();
+                cfg = JSON.stringify(cfg, null, "\t");
             }
+            data.replace(/cfg[\s+]=[\s+]({[^}]*})/,'');
+            //let writeString = "var cfg = " + cfg;
+            let buffer = new Buffer(data);
+            fs.writeFile('./test.js',buffer,function(err){
+                if(err) throw err;
+                console.log('write finished');
+            })
         }
     }
 
