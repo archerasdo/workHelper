@@ -5,5 +5,7 @@
     "workHelper":"workHelper"
   },
   "cfgPath":"/Users/archersado/fdserver/fdserver/config.js",
-  "server":""
+  "dependencies":{
+    "commander":"*"
+  }
 }
