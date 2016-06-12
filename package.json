@@ -4,5 +4,6 @@
   "bin":{
     "workHelper":"workHelper"
   },
-  "cfgPath":"/Users/archersado/fdserver/fdserver/config.js"
+  "cfgPath":"/Users/archersado/fdserver/fdserver/config.js",
+  "server":""
 }
